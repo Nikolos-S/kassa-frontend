@@ -1,0 +1,25 @@
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    @include body-large;
+  }
+
+  a {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }

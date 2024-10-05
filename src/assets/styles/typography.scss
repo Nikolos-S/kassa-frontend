@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-weight: 700;
+  src: url('fonts/Roboto-Bold.ttf');
+}
+
+/* Стили отображения */
+  @mixin display-large {
+    font-family: 'Roboto';
+    font-size: $display-large-size;
+    line-height: $display-large-line-height;
+    letter-spacing: $display-large-letter-spacing;
+  }
+  
+  @mixin display-medium {
+    font-family: 'Roboto';
+    font-size: $display-medium-size;
+    line-height: $display-medium-line-height;
+  }
+  
+  @mixin display-small {
+    font-family: 'Roboto';
+    font-size: $display-small-size;
+    line-height: $display-small-line-height;
+  }
+  
+  /* Стили заголовков */
+  @mixin headline-large {
+    font-family: 'Roboto';
+    font-size: $headline-large-size;
+    line-height: $headline-large-line-height;
+  }
+  
+  @mixin headline-medium {
+    font-family: 'Roboto';
+    font-size: $headline-medium-size;
+    line-height: $headline-medium-line-height;
+  }
+  
+  @mixin headline-small {
+    font-family: 'Roboto';
+    font-size: $headline-small-size;
+    line-height: $headline-small-line-height;
+  }
+  
+  /* Стили заголовков */
+  @mixin title-large {
+    font-family: 'Roboto';
+    font-size: $title-large-size;
+    line-height: $title-large-line-height;
+  }
+  
+  @mixin title-medium {
+    font-family: 'Roboto';
+    font-size: $title-medium-size;
+    line-height: $title-medium-line-height;
+    letter-spacing: $title-medium-letter-spacing;
+  }
+  
+  @mixin title-small {
+    font-family: 'Roboto';
+    font-size: $title-small-size;
+    line-height: $title-small-line-height;
+    letter-spacing: $title-small-letter-spacing;
+  }
+  
+  /* Стили меток */
+  @mixin label-large {
+    font-family: 'Roboto';
+    font-size: $label-large-size;
+    line-height: $label-large-line-height;
+    letter-spacing: $label-large-letter-spacing;
+  }
+  
+  @mixin label-medium {
+    font-family: 'Roboto';
+    font-size: $label-medium-size;
+    line-height: $label-medium-line-height;
+    letter-spacing: $label-medium-letter-spacing;
+  }
+  
+  @mixin label-small {
+    font-family: 'Roboto';
+    font-size: $label-small-size;
+    line-height: $label-small-line-height;
+    letter-spacing: $label-small-letter-spacing;
+  }
+  
+  /* Стили основного текста */
+  @mixin body-large-bold {
+    font-family: 'Roboto Bold';
+    font-size: $body-large-size;
+    line-height: $body-large-line-height;
+    letter-spacing: $body-large-letter-spacing;
+  }
+
+  @mixin body-large {
+    font-family: 'Roboto';
+    font-size: $body-large-size;
+    line-height: $body-large-line-height;
+    letter-spacing: $body-large-letter-spacing;
+  }
+  
+  @mixin body-medium {
+    font-family: 'Roboto';
+    font-size: $body-medium-size;
+    line-height: $body-medium-line-height;
+    letter-spacing: $body-medium-letter-spacing;
+  }
+  
+  @mixin body-small {
+    font-family: 'Roboto';
+    font-size: $body-small-size;
+    line-height: $body-small-line-height;
+    letter-spacing: $body-small-letter-spacing;
+  }
+  
