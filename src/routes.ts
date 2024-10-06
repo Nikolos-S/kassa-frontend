@@ -5,6 +5,7 @@
     refund: () => string,
     arm: () => string,
     reports: () => string,
+    oauth: () => string,
   }
   const routes: Routes = {
     layout: () => '/',
@@ -13,6 +14,7 @@
     arm: () => '/arm',
     reports: () => '/reports',
     login: () => '/login',
+    oauth: () => '/oauth2/success',
   };
   
   export default routes;

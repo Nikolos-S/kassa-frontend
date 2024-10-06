@@ -24,3 +24,11 @@
     margin: 0 auto;
     padding: 0 20px;
   }
+
+  .btnSubmit {
+    padding: 10px 24px;
+    background-color: $blue;
+    color: #fff;
+    @include title-medium;
+    font-weight: 500;
+  }
