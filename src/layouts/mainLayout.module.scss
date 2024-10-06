@@ -1,0 +1,60 @@
+@import '../assets/styles/index.scss';
+
+.layout {
+  height: 52px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $dark-200;
+
+  .link {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-450;
+    @include title-large;
+    font-weight: 500;
+
+    @media (max-width: 850px) {
+      @include title-medium;
+    }
+  }
+  .activeLink {
+    background-color: #fff;
+    color: $blue;
+    border-radius: 8px 8px 0px 0px;
+  }
+}
+
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 32px;
+  bottom: 0;
+  padding: 0 24px;
+  background-color: $dark-150;
+  height: 28px;
+  left: 0;
+  right: 0;
+
+  .btnIcon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    border: none;
+
+    &.bgExit {
+      background-image: url('../assets/images/exit.png');
+    }
+    &.bgMistake {
+      background-image: url('../assets//images/mistake.png');
+    }
+  }
+
+
+}
