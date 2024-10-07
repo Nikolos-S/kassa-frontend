@@ -1,8 +1,7 @@
 import styles from './loginPage.module.scss';
 
 const LoginPage: React.FC = () => {
-  console.log(import.meta.env.VITE_REACT_APP_BASE_URL);
-
+  
   const signIn = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const url = import.meta.env.VITE_REACT_APP_BASE_URL;
