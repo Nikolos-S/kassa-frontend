@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
+
 import styles from './loginPage.module.scss';
 
 const LoginPage: React.FC = () => {
+  const { t } = useTranslation();
   
   const signIn = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -10,8 +13,8 @@ const LoginPage: React.FC = () => {
   return (
     <div className={styles.loginPage}>
       <form className={styles.loginForm} onSubmit={signIn}>
-        <legend className='text-center'>Вход в систему</legend>
-        <button type="submit" className="btn btn-primary btnSubmit">Войти</button>
+        <legend className='text-center'>{t('title.login')}</legend>
+        <button type="submit" className="btn btn-primary btnSubmit">{t('btn.enter')}</button>
       </form>
     </div>
   )

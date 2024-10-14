@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { AuthContext, AuthData } from './index.tsx';
-
 import { getWSAndRole } from '../resourses/apiAuth.ts';
 
 type Props = { children: React.ReactNode };
@@ -9,7 +8,6 @@ type Props = { children: React.ReactNode };
 const authDataKey = 'auth_data';
 
 const AuthProvider: React.FC<Props> = ({ children }) => {
-  
   const state = JSON.parse(sessionStorage.getItem(authDataKey) || '{}') || {};
 
   const [loggedData, setLoggedData] = useState(state);
@@ -21,22 +19,24 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
 
   const updateAllData = ({
     accessToken,
+    refreshToken,
     username,
     ws,
     roles
   }: AuthData) => {
     const data = {
-      accessToken, username, ws, roles,
+      accessToken, refreshToken, username, ws, roles,
   };
   sessionStorage.setItem(authDataKey, JSON.stringify(data));
   setLoggedData(data);
 };
-const getAuthData = async (access: string) => {
+const getAuthData = async (access: string, refresh: string) => {
   let error: string;
   try {
     const response = await getWSAndRole(access);
     updateAllData({
       accessToken: access,
+      refreshToken: refresh,
       username: response.data.fio,
       ws: response.data.workspace,
       roles: response.data.roles,

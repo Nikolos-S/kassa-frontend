@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     color: $dark-450;
-    @include title-large;
+    font-family: sans-serif;
     font-weight: 500;
 
     @media (max-width: 850px) {
@@ -27,6 +27,10 @@
     color: $blue;
     border-radius: 8px 8px 0px 0px;
   }
+}
+
+.mt72 {
+  margin-top: 72px;
 }
 
 .footer {
@@ -52,7 +56,7 @@
       background-image: url('../assets/images/exit.png');
     }
     &.bgMistake {
-      background-image: url('../assets//images/mistake.png');
+      background-image: url('../assets/images/mistake.png');
     }
   }
 

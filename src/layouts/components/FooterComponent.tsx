@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
+import { useAuth, useSession } from '../../context';
+
 import styles from '../mainLayout.module.scss';
-import { useState } from 'react';
-import { useAuth } from '../../context';
 
 const FooterComponent:React.FC = () => {
+  const { t } = useTranslation();
+  const { sessionData } = useSession()
 
   const { logOut, loggedData } = useAuth();
   const handleLogout = () => {
@@ -10,7 +13,6 @@ const FooterComponent:React.FC = () => {
       logOut();
     }
   };
-  const [state, setState] = useState<string>('');
 
   return (
   <>
@@ -19,8 +21,9 @@ const FooterComponent:React.FC = () => {
       type="button"
       className={`btn btn-outline-light ${styles.btnIcon} ${styles.bgExit}`}
     />
-    <span>{`Смена открыта: ${state}`}</span>
-    <span>{`Кассир: ${state}`}</span>
+    {sessionData?.created &&
+      <span>{`${t('layout.sessionStatus')}${sessionData?.created}`}</span>}
+    <span>{`${t('layout.this')}${loggedData?.username}`}</span>
     <button type="button" className={`btn btn-outline-light ${styles.btnIcon} ${styles.bgMistake}`} />
   </>)
 }

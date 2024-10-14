@@ -10,8 +10,9 @@ const RedirectSuccess: React.FC = () => {
   useEffect(() => {
     const myUrl = new URL(window.location.href);
     const accessToken = myUrl.searchParams.get('accessToken');
-    if (getAuthData && accessToken) {
-      getAuthData(accessToken);
+    const refreshToken = myUrl.searchParams.get('refreshToken');
+    if (getAuthData && accessToken && refreshToken) {
+      getAuthData(accessToken, refreshToken);
       navigate(routes.layout());
     }
   }, []);
